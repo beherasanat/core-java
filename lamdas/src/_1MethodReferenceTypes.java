@@ -1,4 +1,4 @@
-public class MethodReferenceTypes {
+public class _1MethodReferenceTypes {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 

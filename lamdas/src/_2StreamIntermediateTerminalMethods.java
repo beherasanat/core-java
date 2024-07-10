@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class StreamIntermediateTerminalMethods {
+public class _2StreamIntermediateTerminalMethods {
     public void m() {
-        List list = new ArrayList();
+        List<Integer> list = new ArrayList();
 
         // TERMINAL OPERATORS
 
@@ -24,6 +24,10 @@ public class StreamIntermediateTerminalMethods {
         list.stream().toList();*/
 
 
+        /*list.stream().iterator();
+        list.stream().spliterator();*/
+
+
         // INTERMEDIATE OPERATORS
 
         /*list.stream().peek();
@@ -38,6 +42,12 @@ public class StreamIntermediateTerminalMethods {
         list.stream().distinct();
         list.stream().flatMap();
         list.stream().map();*/
+
+        /*list.stream().mapToInt(p->p).average();
+        list.stream().mapToInt(p->p).boxed();
+        list.stream().mapToInt(p->p).sum();
+        list.stream().mapToInt(p->p).min();
+        list.stream().mapToInt(p->p).max();*/
 
     }
 }
