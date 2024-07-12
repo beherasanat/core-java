@@ -1,11 +1,12 @@
-public class Employee {
-    String name;
-    double salary;
-    int id;
+package commons;
 
-    public Employee() {
+import java.io.Serializable;
 
-    }
+public class Employee implements Serializable {
+    public String name;
+    public double salary;
+    public int id;
+
     public Employee(String name, double salary, int id) {
         this.name = name;
         this.salary = salary;
