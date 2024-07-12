@@ -98,6 +98,3 @@ class WithoutSerialVersionUID implements Serializable {
                 '}';
     }
 }
-
-
-
