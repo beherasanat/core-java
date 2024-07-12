@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.ArrayList;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.Executors;
 
 public class Data implements Externalizable {
 
@@ -14,7 +16,7 @@ public class Data implements Externalizable {
     public transient int age;
 
     public Data() {
-
+        Executors.newFixedThreadPool(1);
     }
     public Data(int id, String name, int age) {
         this.id = id;
@@ -45,6 +47,5 @@ public class Data implements Externalizable {
         this.name = in.readUTF();
         this.age = in.readInt();
         System.out.println(this);
-        ArrayList list;
     }
 }
