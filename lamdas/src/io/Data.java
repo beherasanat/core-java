@@ -4,6 +4,7 @@ import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
+import java.util.ArrayList;
 
 public class Data implements Externalizable {
 
@@ -44,5 +45,6 @@ public class Data implements Externalizable {
         this.name = in.readUTF();
         this.age = in.readInt();
         System.out.println(this);
+        ArrayList list;
     }
 }

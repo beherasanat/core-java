@@ -65,7 +65,7 @@ class WithSerialVersionUID implements Serializable {
 
     @Override
     public String toString() {
-        return "WithoutSerialVersionUID{" +
+        return "WithSerialVersionUID{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
