@@ -10,14 +10,14 @@ public class SerializeToFile {
     }
 
     static void processWithSerialVersionUID() {
-        WithSerialVersionUID ws1 = new WithSerialVersionUID(1, "sanat", new Date());
+        WithSerialVersionUID ws1 = new WithSerialVersionUID(1, "sanat", new Date(), 30);
         String filePath = "F:\\with.bin";
         //write(filePath, ws1);
         read(filePath);
     }
 
     static void processWithoutSerialVersionUID() {
-        WithoutSerialVersionUID ws1 = new WithoutSerialVersionUID(1, "sanat", new Date());
+        WithoutSerialVersionUID ws1 = new WithoutSerialVersionUID(1, "sanat", 30, new Date());
         String filePath = "F:\\without.bin";
         //write(filePath, ws1);
         read(filePath);
@@ -50,25 +50,26 @@ class WithSerialVersionUID implements Serializable {
 
     int id;
     String name;
-    //int age;
+    int age;
     Date dob;
 
     public WithSerialVersionUID() {
     }
 
-    public WithSerialVersionUID(int id, String name, Date dob) {
+    public WithSerialVersionUID(int id, String name, Date dob, int age) {
         this.id = id;
         this.name = name;
-        //this.age = age;
+        this.age = age;
         this.dob = dob;
     }
 
     @Override
     public String toString() {
-        return "WithSerialVersionUID{" +
+        return "WithoutSerialVersionUID{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + dob +
+                ", age=" + age +
+                ", dob=" + dob +
                 '}';
     }
 }
@@ -77,16 +78,17 @@ class WithoutSerialVersionUID implements Serializable {
 
     int id;
     String name;
-    //int age;
+    int age;
     Date dob;
 
     public WithoutSerialVersionUID() {
     }
 
-    public WithoutSerialVersionUID(int id, String name, Date age) {
+    public WithoutSerialVersionUID(int id, String name, int age, Date dob) {
         this.id = id;
         this.name = name;
-        this.dob = age;
+        this.age = age;
+        this.dob = dob;
     }
 
     @Override
@@ -94,7 +96,8 @@ class WithoutSerialVersionUID implements Serializable {
         return "WithoutSerialVersionUID{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + dob +
+                ", age=" + age +
+                ", dob=" + dob +
                 '}';
     }
 }
