@@ -13,6 +13,7 @@ public class ForkJoinPoolTest {
         }
         Integer res = pool.invoke(new SumTask(num, 0, num.length - 1));
         System.out.println("Total sum = " + res);
+        pool.shutdown();
     }
 }
 
