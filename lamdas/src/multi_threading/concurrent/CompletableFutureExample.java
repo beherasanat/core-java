@@ -1,4 +1,4 @@
-package multi_threading.executors;
+package multi_threading.concurrent;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
