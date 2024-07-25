@@ -21,8 +21,8 @@ public class _2StreamIntermediateTerminalMethods {
         list.stream().allMatch();
         list.stream().isParallel();
         list.stream().toArray();
-        list.stream().toList();*/
-
+        list.stream().toList();
+*/
 
         /*list.stream().iterator();
         list.stream().spliterator();*/

@@ -18,6 +18,7 @@ public class _4progs_EmployeeRelated {
     public static void getHighestSal(List<Employee> empList) {
         empList.stream().map(e -> e.salary).mapToDouble(a->a).max().ifPresent(System.out::println);
         empList.stream().sorted((a,b)->a.salary<b.salary?1:a.salary==b.salary?0:-1).limit(1).forEach(System.out::println);
+        empList.stream().sorted((a,b)->b.salary<a.salary?1:a.salary==b.salary?0:-1).limit(1).forEach(System.out::println);
         System.out.println(empList.stream().collect(Collectors.groupingBy(e->e.gender, Collectors.counting())));
         empList.stream().map(e -> e.department).distinct().forEach(i -> System.out.print(i + ", "));
         System.out.println(empList.stream().collect(Collectors.groupingBy(e->e.gender, Collectors.averagingDouble(e->e.salary))));

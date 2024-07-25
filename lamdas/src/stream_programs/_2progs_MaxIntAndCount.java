@@ -6,19 +6,7 @@ import java.util.stream.Collectors;
 
 public class _2progs_MaxIntAndCount {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.add(5);
-        list.add(1);
-        list.add(1);
-        list.add(4);
-        list.add(5);
-        list.add(5);
-        list.add(17);
-        list.add(18);
-        list.add(19);
-        list.add(20);
-        list.add(21);
-        list.add(22);
+        List<Integer> list = List.of(5, 1, 1, 4, 5, 5, 17, 18, 19, 20, 21, 22);
 
         getMaxInt(list);
         getCount(list);

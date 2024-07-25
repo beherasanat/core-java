@@ -5,6 +5,9 @@ import java.util.stream.Stream;
 
 public class _2progs_FibonacciAndFirst10OddNumbers {
     public static void main(String[] args) {
+
+
+
         getFibonacci(10);
         System.out.println();
         getFirst10OddNumber();
