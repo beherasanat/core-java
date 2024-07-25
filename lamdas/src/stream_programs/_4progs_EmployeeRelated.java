@@ -26,7 +26,6 @@ public class _4progs_EmployeeRelated {
         emp.ifPresent(System.out::println);
     }
 
-
 }
 
 class Employee {
